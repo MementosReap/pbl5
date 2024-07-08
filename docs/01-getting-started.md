@@ -1,4 +1,4 @@
-# Getting Started
+# Getting Started (edited to suit my device during PBL)
 
 ## Setting Up the Environment
 
@@ -50,10 +50,10 @@ ffmpeg -i data/demo_data/bees.mp4 -vf fps=5 data/demo_data/bees/frame-%05d.png
 # Convert street.mp4 to png frames
 mkdir data/demo_data/street
 ffmpeg -i data/demo_data/street.mp4 -vf fps=10 data/demo_data/street/frame-%05d.png
-```
-ffmpeg -i "C:\Users\Mike\Documents\GitHub\Test\data\Test.mov" -vf fps=10 "C:\Users\Mike\Documents\GitHub\Test\data\Testing\frame-%05d.png"
 
-Before running the demo, you additionally have to make sure to have the SAM and PIPS checkpoints downloaded, as described under [minimal checkpoints](03-prepare-checkpoints.md#minimal-checkpoints).
+ffmpeg -i "C:\Users\Mike\Documents\GitHub\Test\data\Test.mov" -vf fps=10 "C:\Users\Mike\Documents\GitHub\Test\data\Testing\frame-%05d.png"
+```
+Before running the demo, you additionally have to make sure to have the SAM and PIPS checkpoints downloaded, as described under [minimal checkpoints](03-prepare-checkpoints.md#minimal-checkpoints). //Important, make sure to make the directories exactly the same as shown in the file. This is due to how the system is structured and it will try to find the checkpoints to how it was programmed
 
 ### Running the Interactive Demo
 
@@ -78,13 +78,16 @@ python -m demo.demo \
   query_points_path=null \
   longest_side_length=1024 frame_stride=1 max_frames=-1
 ```
-# the actual test
+# the actual test (This was for me to copy paste it unto the terminal, frames_path = raw "file_path")
 $env:HYDRA_FULL_ERROR=1; python -m demo.demo frames_path="C:\Users\Mike\Documents\GitHub\Test\data\DAVIS\DAVIS-data\DAVIS\JPEGImages\480p\horsejump-high" query_points_path=null longest_side_length=1024 frame_stride=1 max_frames=-1
 
 $env:HYDRA_FULL_ERROR=1; python -m demo.demo frames_path="C:\Users\Mike\Documents\GitHub\Test\data\blurre" query_points_path=null longest_side_length=1024 frame_stride=1 max_frames=-1
-### Running the Non-interactive Demo
 
-You also have the option to run the demo in a non-interactive mode where query points are predefined in a file. You can create the content of a query points file using the interactive demo, which will print a string of the query points. This string can be saved and used for running the non-interactive demo. More details about the format of the query points file can be found in [`data/demo_data/README.md`](../data/demo_data/README.md). Examples of query point files for the [bees](../data/demo_data/query_points__bees.txt) and [street](../data/demo_data/query_points__street.txt) clips are also provided and can be used as in the following commands:
+### Running the Non-interactive Demo (So once a the model is ran once, the query points will be generated, I left some query points in the data folder and you can copy paste it unto the command code "query_points_path" by replacing 'null' into the .txt file.
+
+ Examples of query point files for the [bees](../data/demo_data/query_points__bees.txt) and [street](../data/demo_data/query_points__street.txt) clips are also provided 
+
+ # Non-Interactive demo run
 
 ```bash
 # Run non-interactive demo on bees.mp4
