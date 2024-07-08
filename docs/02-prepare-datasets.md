@@ -1,4 +1,4 @@
-# Prepare Datasets
+# Prepare Datasets (For a simple run, Just install the DAVIS datasets, it should have enough datasets for presentation :v )
 
 **Important:** This guide is designed for users operating on a Unix-like system such as Linux or MacOS. 
 
