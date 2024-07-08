@@ -1,4 +1,4 @@
-# Preparing Checkpoints
+# Preparing Checkpoints (In order to replicate what I did, Installation of 'sam_ckpt' and 'co_ckpts' is needed. The rest of the checkpoints are needed if you want to replicate the whole experiment that the paper did. Make sure the directory structure is exactly the same as shown!
 
 This guide will walk you through the process of preparing the model checkpoints needed for our experiments.
 
