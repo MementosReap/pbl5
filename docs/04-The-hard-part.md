@@ -1,3 +1,6 @@
+
+*****NOTE***** I wasn't able to get this part running for the experiment, due to the complicated environment and steps they provided, but if you feel like you want to try, feel free to do so!
+
 # Running Experiments
 
 **Note:** Before running the experiments, ensure you've correctly prepared your datasets and checkpoints. If you haven't done so, please refer back to the [Prepare Datasets](./02-prepare-datasets.md) and [Prepare Checkpoints](./03-prepare-checkpoints.md) tutorials.

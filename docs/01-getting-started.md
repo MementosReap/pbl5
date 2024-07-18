@@ -78,7 +78,7 @@ python -m demo.demo \
   query_points_path=null \
   longest_side_length=1024 frame_stride=1 max_frames=-1
 ```
-# the actual test (This was for me to copy paste it unto the terminal, frames_path = raw "file_path")
+# The test I did (This was for me to copy paste it unto the terminal, frames_path = raw "file_path")
 $env:HYDRA_FULL_ERROR=1; python -m demo.demo frames_path="C:\Users\Mike\Documents\GitHub\Test\data\DAVIS\DAVIS-data\DAVIS\JPEGImages\480p\horsejump-high" query_points_path=null longest_side_length=1024 frame_stride=1 max_frames=-1
 
 $env:HYDRA_FULL_ERROR=1; python -m demo.demo frames_path="C:\Users\Mike\Documents\GitHub\Test\data\blurre" query_points_path=null longest_side_length=1024 frame_stride=1 max_frames=-1
@@ -87,7 +87,7 @@ $env:HYDRA_FULL_ERROR=1; python -m demo.demo frames_path="C:\Users\Mike\Document
 
  Examples of query point files for the [bees](../data/demo_data/query_points__bees.txt) and [street](../data/demo_data/query_points__street.txt) clips are also provided 
 
- # Non-Interactive demo run
+ # Non-Interactive demo run (example)
 
 ```bash
 # Run non-interactive demo on bees.mp4

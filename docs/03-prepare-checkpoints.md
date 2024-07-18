@@ -1,4 +1,6 @@
-# Preparing Checkpoints (In order to replicate what I did, Installation of 'sam_ckpt' and 'co_ckpts' is needed. The rest of the checkpoints are needed if you want to replicate the whole experiment that the paper did. Make sure the directory structure is exactly the same as shown!
+# Preparing Checkpoints (In order to replicate what I did, Installation of 'sam_ckpt' and 'co_ckpts' is needed. The rest of the checkpoints are needed if you want to replicate the whole experiment that the paper did. Make sure the directory structure is exactly the same as shown!)
+
+**Note** A quick rundown of what you need to do, These checkpoints are necessary in order to run the experiment
 
 This guide will walk you through the process of preparing the model checkpoints needed for our experiments.
 
@@ -8,7 +10,7 @@ Start by creating a `models` directory at the root of your project to store all 
 mkdir models
 ```
 
-## Minimal Checkpoints
+## Minimal Checkpoints (This is an example of how your directory should look like!(Don't ask me, I'm not the one who designed the model))
 
 If you're running our default variant, SAM-PT or SAM-PT-reinit, you'll only need the following minimal set of checkpoints:
 
@@ -24,7 +26,7 @@ If you're running our default variant, SAM-PT or SAM-PT-reinit, you'll only need
 
 These can be fetched by following the instructions for [HQ-SAM](#hq-sam-and-light-hq-sam) and [CoTracker](#cotracker) provided below.
 
-## Complete Checkpoints
+## Complete Checkpoints (This is what your directory should look like if you want to unlock more features of the model)
 
 For replicating all experiments in the paper, you will need additional checkpoints. These require 9.1GB of disk space in total. Here is the complete structure of the required checkpoints:
 
@@ -72,7 +74,7 @@ For replicating all experiments in the paper, you will need additional checkpoin
         └── [ 11M]  checkpoint_wo_optstate.npy
 ```
 
-Additionally, these are the md5 sums of the checkpoints we have used:
+Additionally, these are the md5 sums of the checkpoints that were used:
 
 ```bash
 # find models -type f -print0 | sort -z | xargs -r0 md5sum
@@ -105,7 +107,18 @@ b8a1ad6eab94ce53be3ce870ed829552  models/tapnet_ckpts/open_source_ckpt/checkpoin
 
 The following sections provide the sources and instructions for downloading these checkpoints. Please refer to the original sources for more detailed instructions or if the links below become inactive. After downloading the checkpoints, they should be placed in the corresponding directories as shown above.
 
-## Downloading Checkpoints
+## Downloading Checkpoints (Make sure cotacker and SAM are installed)
+
+### CoTracker
+
+Source: [facebookresearch/co-tracker](https://github.com/facebookresearch/co-tracker)
+
+```bash
+mkdir models/cotracker_ckpts
+wget --output-document models/cotracker_ckpts/cotracker_stride_4_wind_8.pth https://dl.fbaipublicfiles.com/cotracker/cotracker_stride_4_wind_8.pth
+wget --output-document models/cotracker_ckpts/cotracker_stride_4_wind_12.pth https://dl.fbaipublicfiles.com/cotracker/cotracker_stride_4_wind_12.pth
+wget --output-document models/cotracker_ckpts/cotracker_stride_8_wind_16.pth https://dl.fbaipublicfiles.com/cotracker/cotracker_stride_8_wind_16.pth
+```
 
 ### SAM
 
@@ -206,17 +219,6 @@ mkdir models/superglue_ckpts
 wget --output-document models/superglue_ckpts/superglue_indoor.pth https://github.com/magicleap/SuperGluePretrainedNetwork/raw/ddcf11f42e7e0732a0c4607648f9448ea8d73590/models/weights/superglue_indoor.pth
 wget --output-document models/superglue_ckpts/superglue_outdoor.pth https://github.com/magicleap/SuperGluePretrainedNetwork/raw/ddcf11f42e7e0732a0c4607648f9448ea8d73590/models/weights/superglue_outdoor.pth
 wget --output-document models/superglue_ckpts/superpoint_v1.pth https://github.com/magicleap/SuperGluePretrainedNetwork/raw/ddcf11f42e7e0732a0c4607648f9448ea8d73590/models/weights/superpoint_v1.pth 
-```
-
-### CoTracker
-
-Source: [facebookresearch/co-tracker](https://github.com/facebookresearch/co-tracker)
-
-```bash
-mkdir models/cotracker_ckpts
-wget --output-document models/cotracker_ckpts/cotracker_stride_4_wind_8.pth https://dl.fbaipublicfiles.com/cotracker/cotracker_stride_4_wind_8.pth
-wget --output-document models/cotracker_ckpts/cotracker_stride_4_wind_12.pth https://dl.fbaipublicfiles.com/cotracker/cotracker_stride_4_wind_12.pth
-wget --output-document models/cotracker_ckpts/cotracker_stride_8_wind_16.pth https://dl.fbaipublicfiles.com/cotracker/cotracker_stride_8_wind_16.pth
 ```
 
 ## What's Next?

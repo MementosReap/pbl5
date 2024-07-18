@@ -12,14 +12,8 @@ Annotators only provide a few points to denote the target object at the first vi
   <img alt="horsejump-high" src="assets/Violet_typing_after.gif?raw=true" width="48%" />
 </p>
 
-## Interactive Point-Based Video Segmentation
-
-Annotators can interactively add or remove points to refine the segmentation results.
-<p float="left">
-  <img alt="camel" src="assets/interactive-camel.gif?raw=true" width="96.5%" />
-  <img alt="drift" src="assets/interactive-drift-straight.gif?raw=true" width="96.5%" />
-  <img alt="loading" src="assets/interactive-loading.gif?raw=true" width="96.5%" />
-</p>
+Dataset used!
+https://drive.google.com/drive/folders/1oSXCHEgvIfqBo8ep6v5UXWkN48pZMe5z
 
 ## Documentation
 This is a guideline to how to get the program running!
