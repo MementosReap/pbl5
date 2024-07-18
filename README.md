@@ -6,10 +6,10 @@ SAM-PT is an extention of the [Segment Anything Model](https://github.com/facebo
 
 Annotators only provide a few points to denote the target object at the first video frame to get video segmentation results. Below are a few examples that are provided 
 <p float="left">
-  <img alt="street" src="assets/street.gif?raw=true" width="48%" /> 
-  <img alt="bees" src="assets/bees.gif?raw=true" width="48%" /> 
-  <img alt="avatar" src="assets/avatar.gif?raw=true" width="48%" />
-  <img alt="horsejump-high" src="assets/horsejump-high.gif?raw=true" width="48%" />
+  <img alt="street" src="assets/climbing.gif?raw=true" width="48%" /> 
+  <img alt="bees" src="assets/Dog_after.gif?raw=true" width="48%" /> 
+  <img alt="avatar" src="assets/Violet_jump.gif?raw=true" width="48%" />
+  <img alt="horsejump-high" src="assets/Violet_typing_after.gif?raw=true" width="48%" />
 </p>
 
 ## Interactive Point-Based Video Segmentation
