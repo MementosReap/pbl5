@@ -1,4 +1,4 @@
-# Getting Started (edited to suit my device during PBL)
+# Getting Started (edited to suit my device during PBL) (I used anaconda virtual env to run this project)
 
 ## Setting Up the Environment
 
@@ -30,7 +30,7 @@ Finally, install the required packages:
 pip install -r requirements.txt
 ```
 
-If you wish to use TapNet (or TAPIR) as a point tracker, it's necessary to configure JAX on your system. The required packages, including JAX library version [0.4.11](https://github.com/google/jax/tree/jax-v0.4.11) and others needed by TapNet, can be found in the [`requirements-jax.txt`](../requirements-jax.txt) file. To install JAX, we recommend following the [official installation instructions](https://github.com/google/jax#installation). In some environments, like ours, it may be necessary to build PyTorch and JAX from source.
+If you wish to use TapNet (or TAPIR) as a point tracker, it's necessary to configure JAX on your system. The required packages, including JAX library version [0.4.11](https://github.com/google/jax/tree/jax-v0.4.11) and others needed by TapNet, can be found in the [`requirements-jax.txt`](../requirements-jax.txt) file. To install JAX,  [official installation instructions](https://github.com/google/jax#installation).
 
 ## Running the Demo
 
@@ -57,10 +57,10 @@ Before running the demo, you additionally have to make sure to have the SAM and 
 
 ### Running the Interactive Demo
 
-The interactive demo allows you to specify query points using mouse clicks on a pop-up window. This requires a GUI environment, which is typically available on personal computers. If you're using remote GPUs, you may need to set up X forwarding.
+The interactive demo allows you to specify query points using mouse clicks on a pop-up window. This requires a GUI environment, which is typically available on personal computers. If you're using remote GPUs, you may need to set up X forwarding. (Used an RTX 3070, lab computer ofc)
 
 
-Note that the [`${hydra:runtime.cwd}`](https://hydra.cc/docs/1.3/configure_hydra/intro/#hydraruntime) prefix in the commands below needs to be used to prefix relative paths. This is because we launch demos within a [working directory created by Hydra](https://hydra.cc/docs/1.3/tutorials/basic/running_your_app/working_directory/). Follow the instructions displayed in your terminal after launching the interactive demo.
+Note that the [`${hydra:runtime.cwd}`](https://hydra.cc/docs/1.3/configure_hydra/intro/#hydraruntime) prefix in the commands below needs to be used to prefix relative paths. This is because the demos were launched within a [working directory created by Hydra](https://hydra.cc/docs/1.3/tutorials/basic/running_your_app/working_directory/). Follow the instructions displayed in your terminal after launching the interactive demo.
 
 
 ```bash
